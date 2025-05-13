@@ -21,7 +21,7 @@ public class StationConverter {
         stationDto.setId(station.getId());
         stationDto.setName(station.getName());
         // stationDto.setLocation(station.getLocation());
-        stationDto.setStationLinesNames(station.getStationLines().stream()
+        stationDto.setStationLinesNumbers(station.getStationLines().stream()
                 .map(line -> line.getLine().getNumber())
                 .collect(Collectors.toList()));
         return stationDto;

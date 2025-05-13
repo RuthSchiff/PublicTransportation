@@ -34,18 +34,22 @@ public Long addStationLine(StationLineDTO stationLineDTO) {
     if (line == null) {
         throw new RuntimeException("Line with number " + stationLineDTO.getLineNumber() + " not found");
     }
+            // System.out.println("-------------------"+line+"----------is null");
+
     // שליפת התחנה לפי שם
     Station station = stationRepository.findByName(stationLineDTO.getStationName());
     if (station == null) {
         throw new RuntimeException("Station '" + stationLineDTO.getStationName() + "' not found");
     }
+            //   System.out.println("-------------------"+station+"----------is null");
+
     // שליפת כל תחנות הקו הזה לפי קו בלבד!
     List<StationLine> stationLinesForLine = stationLineRepository.findAll().stream()
         .filter(sl -> sl.getLine().getId() == line.getId())
         .collect(Collectors.toList());
-
+// System.out.println("-------------------"+stationLinesForLine.size()+"----------is null");
     // הדפסת בדיקה
-    System.out.println("Updating stations with order >= " + stationLineDTO.getOrderInLine());
+    // System.out.println("Updating stations with order >= " + stationLineDTO.getOrderInLine());
 
     // הזזה קדימה של תחנות קיימות מהסדר הנתון ומעלה
     for (StationLine sl : stationLinesForLine) {
@@ -53,9 +57,14 @@ public Long addStationLine(StationLineDTO stationLineDTO) {
             sl.setOrderInLine(sl.getOrderInLine() + 1);
             stationLineRepository.save(sl);
         }
+        
     }
+    System.out.println("אחרי הפור");
     //שמירת תחנה חדשה
-    return stationLineConverter.toStationLine(stationLineDTO).getId();
+    StationLine newStationLine = stationLineConverter.toStationLine(stationLineDTO);
+    stationLineRepository.save(newStationLine);
+     System.out.println("אחרי save");
+    return newStationLine.getId();
 
 }
 

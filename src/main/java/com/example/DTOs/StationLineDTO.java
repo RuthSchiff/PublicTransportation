@@ -6,7 +6,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-
 public class StationLineDTO {
 
     private Long id;

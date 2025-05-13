@@ -9,7 +9,10 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.*;
 
-@Data
+@Getter
+@Setter
+@NoArgsConstructor
+@ToString(exclude = "stationLines") // חשוב מאוד!
 @Entity
 @Table(name = "Line")
 public class Line {

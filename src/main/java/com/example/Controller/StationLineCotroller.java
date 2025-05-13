@@ -20,19 +20,29 @@ public class StationLineCotroller {
     @Autowired
     private StationLineService StationLineService;
 
-    @PostMapping("/add")
-    public ResponseEntity<Long> createStationLine(@RequestBody StationLineDTO stationLineDTO) {
+    // @PostMapping("/add")
+    // public ResponseEntity<Long> createStationLine(@RequestBody StationLineDTO stationLineDTO) {
 
+    //     Long result = StationLineService.addStationLine(stationLineDTO);
+    //     if(result != null) 
+    //         return ResponseEntity.status(HttpStatus.CREATED).body(result);
+    //     return ResponseEntity.badRequest().build();
+    // }
+  @PostMapping("/addStationLine")
+    public ResponseEntity<Long> addStationLine(@RequestBody StationLineDTO stationLineDTO) {
         Long result = StationLineService.addStationLine(stationLineDTO);
-        if(result != null) 
+        System.out.println("result: " + result);
+        if (result != null) {
             return ResponseEntity.status(HttpStatus.CREATED).body(result);
+        }
         return ResponseEntity.badRequest().build();
     }
+
     @GetMapping("/getStationLine")
     public ResponseEntity<List<StationLineDTO>> getStationLine() {
         List <StationLineDTO> result = StationLineService.getAll();
         if(result != null) 
-            return ResponseEntity.status(HttpStatus.CREATED).body(result);
+            return ResponseEntity.status(HttpStatus.OK).body(result);
         return ResponseEntity.badRequest().build();
     }
     
