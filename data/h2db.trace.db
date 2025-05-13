@@ -1,0 +1,39 @@
+2025-05-13 12:58:11.059290+03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TRAVEL" not found (this database is empty); SQL statement:
+select t1_0.id,t1_0.bus_id,t1_0.depature_time,t1_0.driver_id,t1_0.line_id from travel t1_0 [42104-232]
+2025-05-13 12:58:15.457572+03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TRAVEL" not found (this database is empty); SQL statement:
+select t1_0.id,t1_0.bus_id,t1_0.depature_time,t1_0.driver_id,t1_0.line_id from travel t1_0 [42104-232]
+2025-05-13 12:58:21.147900+03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "STATION" not found (this database is empty); SQL statement:
+select s1_0.id,s1_0.location,s1_0.name from station s1_0 [42104-232]
+2025-05-13 12:59:00.711577+03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "STATION" not found (this database is empty); SQL statement:
+select s1_0.id,s1_0.location,s1_0.name from station s1_0 [42104-232]
+2025-05-13 13:00:11.559075+03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM INFORMATION_SCHEMA.TABLES INFORMATION_SCHEMA[*].TABLES INFORMATION_SCHEMA.TABLES"; SQL statement:
+SELECT * FROM INFORMATION_SCHEMA.TABLES INFORMATION_SCHEMA.TABLES INFORMATION_SCHEMA.TABLES [42000-232]
+2025-05-13 13:00:15.103761+03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM INFORMATION_SCHEMA.TABLES INFORMATION_SCHEMA[*].TABLES INFORMATION_SCHEMA.TABLES"; SQL statement:
+SELECT * FROM INFORMATION_SCHEMA.TABLES INFORMATION_SCHEMA.TABLES INFORMATION_SCHEMA.TABLES [42000-232]
+2025-05-13 13:00:15.955823+03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM INFORMATION_SCHEMA.TABLES INFORMATION_SCHEMA[*].TABLES INFORMATION_SCHEMA.TABLES"; SQL statement:
+SELECT * FROM INFORMATION_SCHEMA.TABLES INFORMATION_SCHEMA.TABLES INFORMATION_SCHEMA.TABLES [42000-232]
+2025-05-13 13:00:25.675741+03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM INFORMATION_SCHEMA.SCHEMATA INFORMATION_SCHEMA[*].SCHEMATA"; SQL statement:
+SELECT * FROM INFORMATION_SCHEMA.SCHEMATA INFORMATION_SCHEMA.SCHEMATA [42000-232]
+2025-05-13 13:21:49.028485+03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]SSTATION_LINE ELECT * FROM LINE LINE"; expected "SAVEPOINT, SCRIPT, SHUTDOWN"; SQL statement:
+SSTATION_LINE ELECT * FROM LINE LINE [42001-232]
+2025-05-13 13:21:51.542211+03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]SSTATION_LINE ELECT * FROM LINE LINE"; expected "SAVEPOINT, SCRIPT, SHUTDOWN"; SQL statement:
+SSTATION_LINE ELECT * FROM LINE LINE [42001-232]
+2025-05-13 13:21:59.547863+03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]SSTATION_LINE ELECT * FROM LINE LINE"; expected "SAVEPOINT, SCRIPT, SHUTDOWN"; SQL statement:
+SSTATION_LINE ELECT * FROM LINE LINE [42001-232]
+2025-05-13 13:22:00.743077+03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]SSTATION_LINE ELECT * FROM LINE LINE"; expected "SAVEPOINT, SCRIPT, SHUTDOWN"; SQL statement:
+SSTATION_LINE ELECT * FROM LINE LINE [42001-232]
+2025-05-13 13:22:01.902401+03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]SSTATION_LINE ELECT * FROM LINE LINE"; expected "SAVEPOINT, SCRIPT, SHUTDOWN"; SQL statement:
+SSTATION_LINE ELECT * FROM LINE LINE [42001-232]
