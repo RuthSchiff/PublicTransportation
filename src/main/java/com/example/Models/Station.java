@@ -12,23 +12,6 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.*;
 
-// @Data
-// @Entity
-// @Table(name = "Station")
-
-// public class Station {
-//     @Id
-//     @GeneratedValue(strategy = GenerationType.IDENTITY)
-//     private Long id;
-//     private String name;
-    
-// //לכל תחנה יש הרבה קווים
-// @OneToMany(mappedBy = "station", fetch = FetchType.LAZY)
-// private List<StationLine> stationLines;
-
-
-// }
-
 @Getter
 @Setter
 @NoArgsConstructor

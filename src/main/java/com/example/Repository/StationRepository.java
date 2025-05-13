@@ -7,6 +7,7 @@ import com.example.Models.Station;
 public interface StationRepository extends JpaRepository<Station, Long> {
     
     Station findByName(String name); 
-    
+
+    // String SearchByStation(Long stationNumber, String lineNumber); // This method should be implemented in the service laye
   
 }

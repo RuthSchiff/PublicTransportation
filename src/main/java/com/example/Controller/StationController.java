@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -30,6 +31,23 @@ public class StationController {
             return ResponseEntity.status(HttpStatus.CREATED).body(results);
         }
         return ResponseEntity.badRequest().build();
+    }
+    // @GetMapping("/searchByStation({stationNumber}/{lineNumber}")
+    // public ResponseEntity<String> searchByStation(@PathVariable Long stationNumber, @PathVariable String lineNumber) {
+    //     String result = stationService.SearchByStation(stationNumber, lineNumber);
+    //     if (result != null) {
+    //         return ResponseEntity.status(HttpStatus.OK).body(result);
+    //     }
+    //     return ResponseEntity.badRequest().build();
+    // }
+    @GetMapping("/searchByStation({stationNumber}/{lineNumber}")
+    public ResponseEntity<String> searchByStation(@PathVariable Long stationNumber, @PathVariable String lineNumber) {
+       if(lineNumber.equals("*")){
+            return ResponseEntity.status(HttpStatus.OK).body(stationService.SearchByStation(stationNumber));
+        }
+        else{
+            return ResponseEntity.status(HttpStatus.OK).body(stationService.SearchByStation(stationNumber, lineNumber));
+       }
     }
     
 }
