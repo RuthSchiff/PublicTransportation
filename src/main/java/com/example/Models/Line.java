@@ -25,11 +25,6 @@ public class Line {
     private List<Travel> travels;
 
     // לכל קו יש הרבה תחנות
-    // @ManyToMany
-    // @JoinTable(name = "Line_Station", joinColumns = @JoinColumn(name =
-    // "line_id"), inverseJoinColumns = @JoinColumn(name = "station_id"))
-    // private List<StationLine> stationLines;
-    // Line.java
     @OneToMany(mappedBy = "line", fetch = FetchType.LAZY)
     private List<StationLine> stationLines;
 

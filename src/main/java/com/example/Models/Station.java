@@ -21,13 +21,8 @@ public class Station {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private String location;
-
-    // לכל תחנה יש הרבה קווים
-    // @ManyToMany(mappedBy = "stationLines", fetch = FetchType.LAZY)
-    // private List<StationLine> stationLines;
-
-    // Station.java
+    
+//לכל תחנה יש הרבה קווים
 @OneToMany(mappedBy = "station", fetch = FetchType.LAZY)
 private List<StationLine> stationLines;
 

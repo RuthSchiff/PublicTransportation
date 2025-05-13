@@ -26,9 +26,12 @@ public class LineConverter {
         lineDTO.setTravelsId(line.getTravels().stream()
                 .map(travel -> travel.getId())
                 .collect(Collectors.toList()));
-        lineDTO.setStationsLinesIdes(line.getStationLines().stream()
-                .map(station -> station.getId())
-                .collect(Collectors.toList()));
+        lineDTO.setStationsLinesNames(line.getStationLines().stream()
+                .map(station_line -> station_line.getStation().getName())
+                .collect(Collectors.toList()));  
+        // lineDTO.setStationsLinesIdes(line.getStationLines().stream()
+        //         .map(station -> station.getId())
+        //         .collect(Collectors.toList()));
         return lineDTO;
     }
 

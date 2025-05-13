@@ -17,18 +17,19 @@ public class Travel {
     @jakarta.persistence.Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+    
 
-    //לכל נסיעה אוטובוס אחד
+    //לכל אוטובוס יש הרבה נסיעות
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "bus_id")
     private Bus bus;
 
-    //לכל נסיעה נהג אחד
+    //הרבה נסיעות יכולות להיות לנהג אחד
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "driver_id")
     private Driver driver;
 
-    //לכל נסיעה קו אחד
+    //הרבה נסיעות יכולות להיות לקו אחד
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "line_id")
     private Line line;

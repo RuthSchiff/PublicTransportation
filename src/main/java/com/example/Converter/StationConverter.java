@@ -20,9 +20,9 @@ public class StationConverter {
         StationDto stationDto = new StationDto();
         stationDto.setId(station.getId());
         stationDto.setName(station.getName());
-        stationDto.setLocation(station.getLocation());
-        stationDto.setStationLinesIdes(station.getStationLines().stream()
-                .map(line -> line.getId())
+        // stationDto.setLocation(station.getLocation());
+        stationDto.setStationLinesNames(station.getStationLines().stream()
+                .map(line -> line.getLine().getNumber())
                 .collect(Collectors.toList()));
         return stationDto;
     }
@@ -32,14 +32,16 @@ public class StationConverter {
         Station station = new Station();
         station.setId(stationDto.getId());
         station.setName(stationDto.getName());
-        station.setLocation(stationDto.getLocation());
+        // station.setLocation(stationDto.getLocation());
         // station.setStationLines(stationDto.getStationLinesIdes().stream()
         //         .map(lineId -> stationLineRepository.findById(lineId).orElse(null))
         //         .collect(Collectors.toList()));
-        station.setStationLines(stationDto.getStationLinesIdes().stream()
-        .map(stationLineId -> stationLineRepository.findById(stationLineId).orElse(null))
-        // .map(stationLineId -> stationRepository.findById(stationLineId).orElse(null))
-        .collect(Collectors.toList()));
+        // station.se(station.getStationLines().stream()
+        //         .map(station_line -> station_line.getLine().getNumber())
+        //         .collect(Collectors.toList()));  
+        
+        
+
 
         return station;
     }

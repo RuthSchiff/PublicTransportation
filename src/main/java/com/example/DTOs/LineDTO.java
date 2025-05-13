@@ -15,8 +15,9 @@ public class LineDTO {
     private String number;
     private String source;
     private String destination;
+    //נסיעות
     private List<Long> travelsId;
     //קווי התחנה
-    private List<Long> stationsLinesIdes;
+    private List<String> stationsLinesNames;
 
 }

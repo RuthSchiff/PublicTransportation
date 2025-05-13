@@ -27,8 +27,6 @@ public class StationService {
 
     public List<StationDto> getAllStations() {
         List<Station> stations = stationRepository.findAll(); // Get all stations from the database
-        // return StationConverter.convertToDtoList(stations); // Convert the list to
-        // DTO
         StationConverter converter = new StationConverter();
         return converter.convertToDtoList(stations);
 

@@ -21,5 +21,5 @@ public class Bus {
     //לכל אוטובוס יש הרבה נסיעות
     @OneToMany(mappedBy = "bus", fetch = FetchType.LAZY)
     //מפתח זר שמחבר בין טבלת Travel לטבלת Bus
-    private  List<Travel>  Travels;
+    private  List<Travel>  travels;
 }

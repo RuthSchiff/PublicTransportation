@@ -24,10 +24,7 @@ public class Driver {
     //מפתח זר שמחבר בין טבלת Travel לטבלת Driver
     private List<Travel> travels;
 
-    // public Driver(String name, String phoneNumber) {
-    //     this.name = name;
-    //     this.phoneNumber = phoneNumber;
-    // }
+ 
 }
 
 

@@ -1,4 +1,5 @@
 package com.example.DTOs;
+import java.sql.Time;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,10 +15,9 @@ public class BusDTO {
     private Long id;
     private String License_plate;
     private String Seats;
-    // private  List<Long>  TravelsIds;
-    // private List<Long> travelsIds;
+ 
 
-    private List<Long> travelsIds = new ArrayList<>();
+    private List<Time> travelsTimes = new ArrayList<>();
 
     public BusDTO() {} // חובה בנאי ריק
 }
