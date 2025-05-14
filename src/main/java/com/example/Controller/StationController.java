@@ -32,14 +32,6 @@ public class StationController {
         }
         return ResponseEntity.badRequest().build();
     }
-    // @GetMapping("/searchByStation({stationNumber}/{lineNumber}")
-    // public ResponseEntity<String> searchByStation(@PathVariable Long stationNumber, @PathVariable String lineNumber) {
-    //     String result = stationService.SearchByStation(stationNumber, lineNumber);
-    //     if (result != null) {
-    //         return ResponseEntity.status(HttpStatus.OK).body(result);
-    //     }
-    //     return ResponseEntity.badRequest().build();
-    // }
     @GetMapping("/searchByStation({stationNumber}/{lineNumber}")
     public ResponseEntity<String> searchByStation(@PathVariable Long stationNumber, @PathVariable String lineNumber) {
        if(lineNumber.equals("*")){
